@@ -1,4 +1,4 @@
-{% set version = "5.2.5" %}
+{% set version = "5.2.6" %}
 
 package:
   name: xz
@@ -6,13 +6,13 @@ package:
 
 source:
   url: http://downloads.sourceforge.net/project/lzmautils/xz-{{ version }}.tar.bz2
-  sha256: 5117f930900b341493827d63aa910ff5e011e0b994197c3b71c08a20228a42df
+  sha256: 13e3402e301b6018f6a71ef0e497f714c6d11e214ae82dab156b81c2a64acb25
   patches:
     - 0001-Add-vs2008-support-via-cmake.patch
     - 0002-Add-gettimeofday-for-VS2008.patch
 
 build:
-  number: 1
+  number: 0
   run_exports:
     # XZ's track record of backcompat is very good.  Keep default pins (next major version)
     #    https://abi-laboratory.pro/tracker/timeline/xz/
@@ -32,7 +32,7 @@ requirements:
 
 outputs:
   - name: xz
-    script: install.sh   # [unix]
+    script: install.sh  # [unix]
     script: install.bat  # [win]
     test:
       commands:
@@ -47,8 +47,6 @@ outputs:
         - if not exist %LIBRARY_PREFIX%\include\lzma.h exit 1  # [win]
         - test -f ${PREFIX}/lib/liblzma${SHLIB_EXT}  # [unix]
         - test ! -f ${PREFIX}/lib/liblzma.a          # [unix]
-        - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-        - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
   - name: xz-static
     script: install.sh  # [unix]
     script: install.bat  # [win]
