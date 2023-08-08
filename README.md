@@ -1,11 +1,11 @@
-About xz
-========
+About xz-feedstock
+==================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xz-feedstock/blob/main/LICENSE.txt)
 
 Home: http://tukaani.org/xz/
 
 Package license: LGPL-2.1 and GPL-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xz-feedstock/blob/main/LICENSE.txt)
 
 Summary: Data compression software with high compression ratio
 
@@ -75,6 +75,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2233&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/xz-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2233&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/xz-feedstock?branchName=main&jobName=win&configuration=win%20win_arm64_" alt="variant">
                 </a>
               </td>
             </tr>
