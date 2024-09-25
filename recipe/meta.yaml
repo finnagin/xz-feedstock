@@ -58,9 +58,9 @@ outputs:
         - automake  # [not win]
       host:
         - msinttypes  # [win and vc<14]
-        - {{ pin_subpackage('xz', exact=True) }}
+        - {{ pin_subpackage('xz') }}
       run:
-        - {{ pin_subpackage('xz', exact=True) }}
+        - {{ pin_subpackage('xz') }}
     test:
       commands:
         - test -f ${PREFIX}/lib/liblzma.a          # [unix]
