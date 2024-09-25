@@ -1,6 +1,8 @@
 @echo on
 if "%ARCH%" == "64" (
    set ARCH=x64
+) else if "%ARCH%" == "arm64" (
+   set ARCH=ARM64
 ) else (
    set ARCH=Win32
 )
