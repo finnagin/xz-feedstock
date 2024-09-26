@@ -12,10 +12,10 @@ source:
 
 build:
   number: 0
-  run_exports:
-    # XZ's track record of backcompat is very good.  Keep default pins (next major version)
-    #    https://abi-laboratory.pro/tracker/timeline/xz/
-    - {{ pin_subpackage('xz') }}
+  # run_exports:
+  #   # XZ's track record of backcompat is very good.  Keep default pins (next major version)
+  #   #    https://abi-laboratory.pro/tracker/timeline/xz/
+  #   - {{ pin_subpackage('xz') }}
 
 requirements:
   build:
@@ -58,9 +58,9 @@ outputs:
         - automake  # [not win]
       host:
         - msinttypes  # [win and vc<14]
-        - {{ pin_subpackage('xz') }}
-      run:
-        - {{ pin_subpackage('xz') }}
+        # - {{ pin_subpackage('xz') }}
+      # run:
+      #   - {{ pin_subpackage('xz') }}
     test:
       commands:
         - test -f ${PREFIX}/lib/liblzma.a          # [unix]
