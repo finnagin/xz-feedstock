@@ -98,7 +98,6 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-xz-green.svg)](https://anaconda.org/conda-forge/xz) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/xz.svg)](https://anaconda.org/conda-forge/xz) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/xz.svg)](https://anaconda.org/conda-forge/xz) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/xz.svg)](https://anaconda.org/conda-forge/xz) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-xz--static-green.svg)](https://anaconda.org/conda-forge/xz-static) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/xz-static.svg)](https://anaconda.org/conda-forge/xz-static) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/xz-static.svg)](https://anaconda.org/conda-forge/xz-static) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/xz-static.svg)](https://anaconda.org/conda-forge/xz-static) |
 
 Installing xz
 =============
@@ -110,16 +109,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `xz, xz-static` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `xz` can be installed with `conda`:
 
 ```
-conda install xz xz-static
+conda install xz
 ```
 
 or with `mamba`:
 
 ```
-mamba install xz xz-static
+mamba install xz
 ```
 
 It is possible to list all of the versions of `xz` available on your platform with `conda`:
